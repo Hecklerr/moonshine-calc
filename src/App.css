@@ -1,0 +1,24 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* 1. Force handlers to always take up space so they don't push the suffix */
+.stable-input .ant-input-number-handler-wrap {
+  opacity: 1 !important;
+  width: 22px !important;
+  border-inline-start: 1px solid #d9d9d9 !important;
+}
+
+/* 2. Ensure the suffix (our X and unit) stays to the left of the arrows */
+.stable-input .ant-input-number-suffix {
+  margin-inline-end: 24px !important; /* Reserve space for the arrows */
+  transition: none !important; /* Disable any shifting animations */
+}
+
+/* 3. Fix the overall height to prevent vertical jumping */
+.stable-input {
+  height: 40px;
+}
